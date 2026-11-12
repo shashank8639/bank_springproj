@@ -12,12 +12,13 @@ public class BankAcc {
 	public BankAcc() {
 
 	}
-	public BankAcc(long id, String accHolder, double balance, String penaltyStatus) {
-		super();
+
+	public BankAcc(long id, String accHolder, double balance, String penaltyStatus, double penalizedAmount) {
 		this.id = id;
 		this.accHolder = accHolder;
 		this.balance = balance;
 		this.penaltyStatus = penaltyStatus;
+		this.penalizedAmount = penalizedAmount;
 	}
 
 	public long getId() {
@@ -51,5 +52,12 @@ public class BankAcc {
 	public void setPenaltyStatus(String penaltyStatus) {
 		this.penaltyStatus = penaltyStatus;
 	}
-	
+
+	public double getPenalizedAmount() {
+		return penalizedAmount;
+	}
+
+	public void setPenalizedAmount(double penalizedAmount) {
+		this.penalizedAmount = penalizedAmount;
+	}
 }
