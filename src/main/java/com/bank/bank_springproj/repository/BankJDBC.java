@@ -9,7 +9,7 @@ import com.bank.bank_springproj.model.BankAcc;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class BankJDBC {
+public class BankJDBC implements MyRepo{
 
     private final DataSource dataSource;
 

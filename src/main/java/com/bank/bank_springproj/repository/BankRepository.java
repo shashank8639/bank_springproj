@@ -4,20 +4,22 @@ import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
-import org.springframework.stereotype.Repository;
 
 import com.bank.bank_springproj.model.BankAcc;
+import org.springframework.stereotype.Repository;
 
 @Repository
-public class BankRepository {
+public class BankRepository implements MyRepo {
 
 	private final JdbcTemplate jdbcTemplate;
 
 	public BankRepository(JdbcTemplate jdbcTemplate) {
+
 		this.jdbcTemplate = jdbcTemplate;
 	}
 
@@ -35,7 +37,7 @@ public class BankRepository {
 	public BankAcc registerAcc(BankAcc account) {
 		String sql = "insert into bank_acc(acc_holder, balance, penalty_status,penalized_amount) " +
 				" values (?,?,?,?)";
-
+		System.out.println("BankRep: class");
 		KeyHolder keyHolder = new GeneratedKeyHolder();
 
 
