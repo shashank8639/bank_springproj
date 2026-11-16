@@ -2,4 +2,4 @@
 
 ## 📚 Documentation
 Click the link below to view the Spring JDBC Notes:
-👉 **[Spring JDBC Notes (PDF)](./src/main/resources/5_Spring JDBC – Complete Notes with CRUD Operations.pdf)**
+👉 **[Spring JDBC Notes (PDF)](src/main/resources/5_Spring%20JDBC%20-%20Complete%20Notes%20with%20CRUD%20Operations.pdf)**
