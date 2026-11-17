@@ -6,9 +6,11 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import com.bank.bank_springproj.model.BankAcc;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
 @Repository
+@Primary
 public class BankJDBC implements MyRepo{
 
     private final DataSource dataSource;
